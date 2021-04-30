@@ -16,6 +16,10 @@ func CountingValleys(n int, ar string) {
 	for _, v := range ar {
 		// U = 85
 		// D = 68
+		if v != 85 && v != 68 {
+			fmt.Println("input value 2 salah")
+			return
+		}
 		if v == 85 {
 			cpos += 1
 		} else {
@@ -36,6 +40,7 @@ func main() {
 	v1, err := strconv.Atoi(s1)
 	if err != nil {
 		fmt.Println("input value 1 salah")
+		return
 	}
 	s2 := readLine(reader1)
 	s2 = strings.Replace(s2, " ", "", -1)
